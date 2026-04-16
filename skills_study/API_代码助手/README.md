@@ -157,6 +157,36 @@ fetch('http://localhost:8000/api/explain', {
 
 ---
 
+## 测试 API
+
+### 方法 1：快速测试（无需启动 Flask 服务）
+
+```bash
+python quick_test.py
+```
+
+这会直接测试 API 功能是否正常工作。
+
+### 方法 2：Agent 自主调用演示
+
+```bash
+python agent_demo.py
+```
+
+这是一个交互式演示，LLM 会自主决定调用哪个工具来完成任务。
+
+### 方法 3：启动 Flask 服务测试
+
+```bash
+# 启动服务
+python app.py
+
+# 在另一个终端测试
+curl http://localhost:8000/api/health
+```
+
+---
+
 ## 项目结构
 
 ```

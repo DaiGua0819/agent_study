@@ -4,10 +4,8 @@
 import os
 
 # 阿里云 DashScope API Key
-DASHSCOPE_API_KEY = os.getenv("DASHSCOPE_API_KEY", "")
-
-if not DASHSCOPE_API_KEY:
-    raise ValueError("请设置环境变量 DASHSCOPE_API_KEY")
+# 优先从环境变量读取，如果没有则使用默认值（仅用于本地测试）
+DASHSCOPE_API_KEY = os.getenv("DASHSCOPE_API_KEY", "sk-948e99a23fd44f42944e74f102c7be29")
 
 # 默认模型
 DEFAULT_MODEL = "qwen-plus"
